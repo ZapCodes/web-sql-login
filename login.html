@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
+    <title>Login</title>
+</head>
+<body>
+    <form action = "authentication.php" onsubmit = "return validation()" method = "POST">
+        <label class="gmail" style="margin-left: 190px;">Email</label>
+
+        <input class="username" name="username">
+
+        <label class="password" style="margin-left: 178px;">Password</label>
+
+        <input class="password" name="password">
+
+        <button class="login" name="success">Login</button>
+        
+
+    </form>
+    <style>
+        form {
+            max-width: 100%;
+            width: 430px;
+            height: 300px;
+            display: table;
+            background-color: aqua;
+            margin-top: 120px;
+            margin-left: 705px;
+
+        }
+
+        label  {
+            max-width: 100%;
+            width: 100px;
+            display: table;
+            margin-top: 30px;
+        }
+        
+    
+
+        button {
+            max-width: 100%;
+            width: 90px;
+            height: 30px;
+            display: table;
+            margin-top: 30px;
+            margin-left: 170px;
+            margin-right: -30px;
+            background: gray;
+            color: blue;
+            box-shadow: inset 400px 0 0 0 0 #fff;
+            transition: ease-out 0.08s;
+            cursor: pointer;
+
+        }
+        button:hover {
+            box-shadow: inset 400px 0 0 0  rgb(255, 0, 0);
+            color: rgb(0, 4, 255);
+
+        }
+
+        input {
+            display: flex;
+            margin-top: 10px;
+            margin-left: 105px;
+            
+        }
+
+
+
+
+    </style>
+    <script>  
+        function validation()  
+        {  
+            var id=document.f1.user.value;  
+            var ps=document.f1.pass.value;  
+            if(id.length=="" && ps.length=="") {  
+                alert("User Name and Password fields are empty");  
+                return false;  
+            }  
+            else  
+            {  
+                if(id.length=="") {  
+                    alert("User Name is empty");  
+                    return false;  
+                }   
+                if (ps.length=="") {  
+                alert("Password field is empty");  
+                return false;  
+                }  
+            }                             
+        }  
+    </script>  
+    
+</body>
+</html>
